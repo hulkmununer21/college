@@ -1,0 +1,56 @@
+# Configuration files
+config/database.php
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Upload directories (keep the directory but ignore contents)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Session files
+sessions/
+
+# Composer
+vendor/
+composer.phar
+composer.lock
+
+# Node modules (if using npm)
+node_modules/
+package-lock.json
+
+# Build files
+dist/
+build/
+
+# Backup files
+*.sql
+*.sql.gz
+backups/
+
+# Error logs
+error_log
+php_errors.log

@@ -1,0 +1,22 @@
+<?php
+/**
+ * Database Configuration File - EXAMPLE
+ * 
+ * Copy this file to database.php and update with your credentials
+ * IMPORTANT: Never commit database.php with real credentials to git
+ */
+
+// Remote Database Configuration
+define('DB_HOST', 'your-database-host.example.com');  // e.g., mysql-railway.app
+define('DB_NAME', 'school_management_db');             // Your database name
+define('DB_USER', 'your_database_username');           // Your database user
+define('DB_PASS', 'your_secure_password');             // Your database password
+define('DB_CHARSET', 'utf8mb4');
+
+// PDO Options (Leave as is)
+define('DB_OPTIONS', [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+    PDO::ATTR_PERSISTENT         => false
+]);

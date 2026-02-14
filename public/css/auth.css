@@ -1,0 +1,337 @@
+/* ========================================
+   Authentication Pages Stylesheet
+   Version: 1.0.0
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.auth-box {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.auth-box-wide {
+    max-width: 600px;
+}
+
+.auth-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.auth-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.auth-form {
+    padding: 30px;
+}
+
+.auth-info {
+    padding: 20px 30px 0;
+    color: #666;
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-control::placeholder {
+    color: #a0aec0;
+}
+
+.form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #718096;
+}
+
+.form-group-checkbox {
+    margin-bottom: 20px;
+}
+
+.form-group-checkbox label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.password-strength {
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+.auth-links {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.auth-links a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.auth-links a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.auth-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.auth-footer a {
+    color: #718096;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.auth-footer a:hover {
+    color: #667eea;
+}
+
+.flash-messages-auth {
+    padding: 0 30px;
+    margin-top: 20px;
+}
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.alert-success {
+    background-color: #48bb78;
+    color: white;
+}
+
+.alert-error {
+    background-color: #f56565;
+    color: white;
+}
+
+.alert-warning {
+    background-color: #ed8936;
+    color: white;
+}
+
+.alert-info {
+    background-color: #4299e1;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 10px;
+    }
+
+    .auth-box {
+        border-radius: 10px;
+    }
+
+    .auth-header {
+        padding: 20px;
+    }
+
+    .auth-header h1 {
+        font-size: 24px;
+    }
+
+    .auth-form {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ========================================
+   Role Badges
+   ======================================== */
+
+.role-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.admin-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.student-badge {
+    background: rgba(76, 175, 80, 0.2);
+    color: white;
+    border: 2px solid rgba(76, 175, 80, 0.5);
+}
+
+.lecturer-badge {
+    background: rgba(33, 150, 243, 0.2);
+    color: white;
+    border: 2px solid rgba(33, 150, 243, 0.5);
+}
+
+.hod-badge {
+    background: rgba(255, 152, 0, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 152, 0, 0.5);
+}
+
+.bursar-badge {
+    background: rgba(156, 39, 176, 0.2);
+    color: white;
+    border: 2px solid rgba(156, 39, 176, 0.5);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .auth-header h1 {
+        font-size: 20px;
+    }
+
+    .auth-form {
+        padding: 15px;
+    }
+}
